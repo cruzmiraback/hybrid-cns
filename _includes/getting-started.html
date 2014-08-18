@@ -1,0 +1,25 @@
+<div id="gettingstarted" class="container section">
+	<h2>Getting Started with BridgeIt</h2>
+	<p>
+		is as easy as 1, 2, 3…
+	</p>
+	<p>
+		1. Include the BridgeIt JavaScript in your page
+	</p>
+{% highlight html %}
+<script type="text/javascript" src="http://api.bridgeit.mobi/bridgeit/bridgeit.js"></script>
+{% endhighlight %}
+	<p>
+		2. Attach a BridgeIt call to some action element on your page, and provide a callback to handle returned values from BridgeIt.  For instance, a button to retrieve a contact from the address book...
+	</p>
+{% highlight javascript %}
+bridgeit.fetchContact('myId', callback);
+{% endhighlight %}
+	<p>
+		3. Access the page from your mobile browser. If the BridgeIt utility app is not already installed, you will be prompted to do so.  Once the BridgeIt utility app is installed, your application can access all of BridgeIt&#39;s native features.
+	</p>
+	<h3>Getting Started Video</h3>
+    <div class="getting-started-video">
+        <img src="../images/bridgeIt-demo.jpg" alt="BridgeIt Video"/>
+    </div>
+</div>

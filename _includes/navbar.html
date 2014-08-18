@@ -1,0 +1,116 @@
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="fa fa-list-ul"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html" tabindex="0"></a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown {% if include.category == 'bridgeit' %}active{% endif %}">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" tabindex="1"
+                                    onclick="window.location.href='index.html';">
+                                    Solutions
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-summary">
+                                        ******Enter Description Here******
+                                    </li>
+                                    <li>
+                                        <a href="hybrid/bridgeit.html" tabindex="4">
+                                            <i class="fa fa-cubes" style="padding-right:5px;"></i>&nbsp;Hybrid Client
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="notify/notify.html" tabindex="5">
+                                            <i class="fa fa-cloud-download"></i>Contextual Notification System
+                                        </a>
+                                    </li>
+                                </ul>
+                                <b class="caret"></b>
+                            </li>
+                            <li class="dropdown {% if include.category == 'community' %}active{% endif %} community-nav">
+                                <a href="/community.html" class="dropdown-toggle" data-toggle="dropdown" tabindex="2"
+                                    onclick="window.location.href='/community.html';">Community</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-summary">
+                                      BridgeIt is free to use, and available on GitHub. <br/>Connect with BridgeIt on Twitter and Facebook.
+                                    </li>
+                                    <li>
+                                        <a href="{{ site.forums_url }}" tabindex="6">
+                                            <i class="fa fa-comments-o"></i>Forums&nbsp;&amp;&nbsp;Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site.github_url}}" tabindex="7" target="_blank">
+                                            <i class="fa fa-github"></i>GitHub
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site.twitter_url}}" tabindex="8" target="_blank">
+                                            <i class="fa fa-twitter-square"></i>Twitter
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ site.facebook_url }}" tabindex="9" target="_blank">
+                                            <i class="fa fa-facebook-square"></i>Facebook
+                                        </a>
+                                    </li>
+                                </ul>
+                                <b class="caret"></b>
+                            </li>
+
+                            <li class="dropdown {% if include.category == 'about' %}active{% endif %}">
+                                <a href="/about.html" class="dropdown-toggle" data-toggle="dropdown" tabindex="3"
+                                    onclick="window.location.href='/about.html';">About </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-summary">
+                                      BridgeIt is high-value, open source and easy to use. <br/>Consider BridgeIt for all your HTML5 applications.
+                                    </li>
+                                    {% if include.category == 'about' %}
+                                    <li>
+                                        <a onclick="scrollToSection('icesoft');" tabindex="10">
+                                            <i><img alt="ICEsoft Emblem" src="../images/icesoft-18x18.png" style="width: 17px;margin-top: -10px"/></i>ICEsoft
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onclick="scrollToSection('license');" tabindex="11">
+                                            <i><img alt="BridgeIt OS License" src="../images/handshake-icon.png" class="navbar-handshake-icon"/></i>License
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onclick="scrollToSection('privacy');" tabindex="12">
+                                            <i class="fa fa-asterisk"></i>Privacy
+                                        </a>
+                                    </li>
+                                    {% else %}
+                                    <li>
+                                        <a href="/about.html#icesoft" tabindex="13">
+                                            <i><img alt="ICEsoft Emblem" src="../images/icesoft-18x18.png" style="width: 17px;margin-top: -10px"/></i>ICEsoft
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about.html#license" tabindex="14">
+                                            <i><img alt="BridgeIt OS License" src="../images/handshake-icon.png" class="navbar-handshake-icon"/></i>License
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about.html#privacy" tabindex="15">
+                                            <i class="fa fa-asterisk"></i>Privacy
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                                <b class="caret"></b>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <script type="text/javascript">
+            function scrollToSection(section){
+                $('html, body').animate({scrollTop: $('#'+section).offset().top-10, easing: 'easeout'}, 1000);
+                window.location.hash = section;
+            }
+            </script>

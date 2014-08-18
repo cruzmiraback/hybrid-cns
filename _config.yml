@@ -1,0 +1,79 @@
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+include:     ['.htaccess']
+exclude:     []
+keep_files:  ['.git','.svn']
+timezone:    nil
+encoding:    nil
+
+future:      true
+show_drafts: nil
+limit_posts: 0
+pygments:    true
+
+relative_permalinks: true
+
+permalink:     date
+paginate_path: 'page:num'
+
+markdown:      maruku
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
+
+excerpt_separator: "\n\n"
+
+safe:        false
+host:        0.0.0.0
+port:        4000
+baseurl:     /
+url:         http://localhost:4000
+lsi:         false
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+redcloth:
+  hard_breaks: true
+
+forums_url: http://bridgeit.mobi/forum/
+api_docs_url: http://bridgeit.mobi/docs/
+icesoft_url: http://www.icesoft.org
+os_license_url: http://www.apache.org/licenses/LICENSE-2.0
+twitter_url: https://twitter.com/bridgeitmobi
+facebook_url: https://www.facebook.com/bridgeitmobi
+github_url: http://github.com/bridgeit/
+demo_url: http://bridgeit.mobi/demo/
+bridgeit_js_url: http://api.bridgeit.mobi/bridgeit/bridgeit.js
+github_js_url: http://bridgeit.github.io/bridgeit.js/src/bridgeit.js
+version_js_url: http://api.bridgeit.mobi/bridgeit/bridgeit.js
+apple_app_url: https://itunes.apple.com/app/bridgeit/id727736414
+android_app_url: https://play.google.com/store/apps/details?id=mobi.bridgeit
+windows_app_url: http://www.windowsphone.com/en-ca/store/app/bridgeit/b9a1b29f-2b30-4e5d-9bf1-f75e773d74e1

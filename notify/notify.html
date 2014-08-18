@@ -1,0 +1,126 @@
+---
+desc:
+keywords:
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BridgeIt Contextual Notification System</title>
+    {% include head.html %}
+</head>
+
+<body>
+    <div id="wrap">
+        {% include navbar-notify.html category="notify" %}
+        {% include carousel.html %}
+        <div class="main">
+            <div id="features" class="container section">
+                <h2>BridgeIt Contextual Notification System</h2>
+                <p>
+                    Building on basic push capabilities, which are commonplace in modern web and mobile applications,
+                    contextual notification vaults you beyond the basics, enabling you to tailor notifications precisely
+                    to the individual circumstances of your users.  The BridgeIt Contextual Notification System offers a
+                    suite of cloud-based services for building sophisticated, context-sensitive notification capabilities
+                    into your HTML5 applications. With the Contextual Notification System, you can:
+                </p>
+                <ul>
+                    <li>Customize a secure notification realm to match your application's exact requirements,</li>
+                    <li>Leverage realm services to establish and maintain dynamic application and user context,</li>
+                    <li>Generate and filter notifications against that context,</li>
+                    <li>
+                        Push notifications to users over a wide range of transports, including Email, SMS, Ajax Push, and
+                        Cloud Push (using mobile platform push services including APNS, GCM, WNS, and BBPS),
+                    </li>
+                    <li>Configure, manage, and monitor your notification realms from the BridgeIt Console.</li>
+                </ul>
+                <p>
+                    Cloud-based hosting eliminates deployment hassles, making it easy for you to add contextual
+                    notification to your HTML5 applications today, and ensuring that your users are getting timely
+                    notifications, tailored to their specific circumstance.  Let BridgeIt help you get the right
+                    information to the right people at the right time.
+                </p>
+            </div>
+            <div id="secureRealms" class="container section items top-divider">
+                <h2>Secure Notification Realms</h2>
+                <p>
+                    The Contextual Notification System is founded on a multi-tenant, realm-based security architecture.
+                    Administrative accounts are established for each tenant, with namespace and database separation
+                    enforced between accounts.  Within an account, multiple notification realms can be established, again
+                    with namespace and data separation enforced between realms.  Within a notification realm you can
+                    configure the required services, add and manage users, establish and maintain user and application
+                    context, and generate notifications using customized logic to filter against that context.  The
+                    security features of a notification realm include:
+                </p>
+                <ul>
+                    <li>Complete sandboxing and namespace separation between realms,</li>
+                    <li>
+                        User authentication with support for Basic, Digest, OAuth2 protocols, and integration with 3rd
+                        party authentication services like Facebook, Twitter, and Google,
+                    </li>
+                    <li>Permission-based access control using time-limited access tokens,</li>
+                    <li>CORS support with configurable, realm-level origin checking.</li>
+                </ul>
+            </div>
+            <div id="realmServices" class="container section items top-divider">
+                <h2>Realm Services</h2>
+                <p>
+                    The Contextual Notification System offers a suite of cloud-based services for the implementation of
+                    your business-specific notification logic.  Each service presents a REST API which is conveniently
+                    accessible from your HTML5 application via a JavaScript library.  The following Realm Services are
+                    available:
+                </p>
+                <p>
+                    <strong>Authentication Service</strong> manages user credentials, authenticates users, and enforces
+                    permission-based access control to other Realm Services.<br/><br/>
+                    <strong>Document Service</strong> provides CRUD operations for JSON documents and document query
+                    capabilities. Application and user context can be persisted in the Document Service, and subsequent
+                    queries against that context can be used to filter notifications.<br/><br/>
+                    <strong>Locate Service</strong> manages location-related context, including user location, regions
+                    and points of interest.  Location monitors can be configured to fire events under specific conditions
+                    like location change, entering/exiting regions, or coming into proximity of a point of interest.
+                    These events can directly trigger notifications, or can initiate flows in the Code Service. The
+                    Location Service supports various location sources including BridgeIt Geotracking and Google Locate,
+                    and is extensible to other 3rd party location sources.<br/><br/>
+                    <strong>Code Service</strong> provides a flow-based programming environment for the development of
+                    custom server-side logic in your application. A suite of input, output and function nodes make it
+                    easy to develop flows to handle user interactions, process location data and monitors, filter against
+                    context, and generate notifications. A drag and drop flow editor facilitates development of custom
+                    flow logic without writing any code.<br/><br/>
+                    <strong>Notification Service</strong> pushes notifications over multiple transports, automatically
+                    selecting the appropriate transport for each client receiving a notification.  Supported transports
+                    include Email, SMS, Ajax Push, and Cloud Push via platform specific push mechanisms including Apple
+                    Push Notification Service, Google Cloud Messaging, Windows Notification Service, and Blackberry Push
+                    Service.<br/><br/>
+                    <strong>Metrics Service</strong> collects metrics from other running services in support of run time
+                    analytics for notification realms and accounts. The Metrics Service can also be used to generate
+                    application-specific metrics.
+                </p>
+            </div>
+            <div id="console" class="container section items top-divider">
+                <h2>BridgeIt Console</h2>
+                <p>
+                    The Console provides administrative and operational control over accounts, and realms in the Contextual
+                    Notification System. Administrative capabilities include:
+                </p>
+                <ul>
+                    <li>CRUD operations for notification realm,</li>
+                    <li>CRUD operations for users,</li>
+                    <li>Permissions and access control management.</li>
+                </ul>
+                <p>Operational capabilities include:</p>
+                <ul>
+                    <li>Manual and scheduled notification generation,</li>
+                    <li>CRUD operations for geolocation regions, points of interest, and monitors,</li>
+                    <li>CRUD operations for context filters,</li>
+                    <li>Code Service flow editing and management,</li>
+                    <li>Metrics viewing and analytics.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    {% include footer.html %}
+    {% include js.html %}
+</body>
+</html>
