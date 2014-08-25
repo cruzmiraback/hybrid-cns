@@ -70,10 +70,10 @@ h3, .h3{
     color:#FFFFFF;
 }
 
-.jumbotron h2.splash-head {
+.jumbotron.home h2.splash-head {
     margin-top:17px;
 }
-.jumbotron h2.splash-head .bridgeit-font {
+.jumbotron.home h2.splash-head .bridgeit-font {
     font-size:40px;
 }
 
@@ -667,16 +667,23 @@ html.ie8 #carousel{
         background-position: 50% 0;
 
     }
-    .jumbotron .container{
+    .jumbotron.home .container{
         min-height: 495px;
+    }
+    .jumbotron.hybrid .container{
+        min-height: 320px;
     }
     .jumbotron h2 {
         font-size: 50px;
         text-shadow: 0px -2px 5px rgba(85, 64, 52, 0.9);
         margin-top: 30px;
     }
-    .jumbotron h2 .bridgeit-font{
+    .jumbotron.home h2 .bridgeit-font{
         font-size: 24px;
+        color: white;
+    }
+    .jumbotron.hybrid h2 .bridgeit-font{
+        font-size: 46px;
         color: white;
     }
     .jumbotron .banner-image{
@@ -690,10 +697,13 @@ html.ie8 #carousel{
         margin-left: -39px;
     }
     .jumbotron h1 {
-        font-size: 23px;
+        font-size: 26px;
         color: #FFFFFF;
         line-height: 1.4;
         font-weight: 300;
+    }
+    .jumbotron.home h1 {
+        font-size: 23px;
     }
     #carousel{
         background-color: rgba(0,0,0,0.2);
@@ -1242,19 +1252,27 @@ pre {
 }
 
 @media (min-width: 992px) {
-    .bannerLeft,
-    .bannerRight {
+    .hybrid .bannerLeft {
+        padding-left:150px;
+        width:52%;
+    }
+    .home .bannerLeft,
+    .home .bannerRight {
         margin-top: -34px;
     }
     .bannerButtons {
         padding-left:110px;
     }
-}
 
-.bannerImage img {
-    width:91%;
-    margin-left: 80px;
-    margin-top: 0px;
+    .hybrid .bannerImage {
+        padding-left:4px;
+        width:48%;
+    }
+    .home .bannerImage img {
+        width:91%;
+        margin-left: 80px;
+        margin-top: 0px;
+    }
 }
 
 .splash-buttons .btn {

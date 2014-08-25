@@ -4949,9 +4949,11 @@ a.list-group-item.active > .badge,
 }
 
 @media screen and (min-width: 768px) {
-  .jumbotron {
+  .jumbotron.hybrid {
+    padding-top: 48px;
+  }
+  .jumbotron.home {
     padding-top: 0px;
-    padding-bottom: 48px;
   }
   .container .jumbotron {
     padding-right: 60px;
