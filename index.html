@@ -12,11 +12,11 @@ keywords: hybrid mobile development, hybrid HTML5 app, cross-platform mobile, hy
 
     <body>
         <div id="wrap">
-            {% include navbar.html category="main" %}
-            {% include splash.html %}
+            {% include navbar.html category="main" section="home" %}
+            {% include splash.html section="home" %}
             {% include carousel.html %}
             <div class="main">
-                {% include feature-items.html %}
+                {% include feature-items.html section="home" %}
             </div>
          </div>
         {% include footer.html %}
